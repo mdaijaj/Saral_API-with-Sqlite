@@ -15,11 +15,11 @@ If you're using Linux, install nodejs and npm(node-package-manager) by running f
 `Sqlite3: sudo apt-get install sqlite3`<br><br>
 
 
-If you testing API than you have to download Postman Application.
+If you testing API than you have to download Postman Application.<br>
 
 How to run?
 Open your terminal and type following command to start your localhost.
 
-nodemon saral_api.js
+nodemon saral_api.js<br>
 
 Now open your browser and type the following URL:http://localhost:5000/all_courses and show the data.
