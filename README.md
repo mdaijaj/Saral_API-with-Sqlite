@@ -25,7 +25,8 @@ Open your terminal and type following command to start your localhost.
 Now open your browser and type the following URL:http://localhost:5000/all_courses and show the data.<br>
 
 If you want to see database than following the command given there.<br>
-directory sqlite3 databases name.
+
+directory sqlite3 databases name.<br>
 show database: `.databases` <br> 
 show tables : `.tabes` <br>
 then sqlite databases query
