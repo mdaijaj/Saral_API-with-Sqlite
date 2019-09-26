@@ -4,39 +4,7 @@ var sqlite3=require("sqlite3");
 var app=express();
 app.use(express.json());
 
-//create table by using get method
-app.get("/create_table", function(req,res){
-    let db=new sqlite3.Database("saral_api", function(err){
-    if(!err){
-    	db.run("create table navgurukul_courses(id integer primary key autoincrement, name text, description text)", function(exists){
-	    	if(exists){
-	    		console.log("table allready exists!")
-	    	}else{	
-	    		console.log("table created successfully!")
-	    	}
-    	})
-    	db.run("create table exercise_table(id integer, course_id integer primary key autoincrement, name text, content text, hint text)", function(exists){
-    		if(exists){
-	    		console.log("table allready exists!")
-	    	}else{	
-	    		console.log("table created successfully!")
-	    	}
-    	})
-    	db.run("create table comment_table(exercise_id integer, id integer primary key autoincrement, username text, comment text)", function(exists){
-    		if(exists){
-	    		console.log("table allready exists!")
-	    	}else{	
-	    		console.log("table created successfully!")
-	    	}
-    	})
-    }else{
-    	console.log(err)
-    }
-	})
-	res.send("{data:table allready exists}")
-})
-
-//==========================================================================================================================
+var saral_db=require("./saral_db")
 
 //get all course where using get method
 app.get("/all_courses", function(req,res){
@@ -302,7 +270,10 @@ app.delete("/all_exercises/:exercise_id/delete_comment/:id", function(req,res){
 		}
 	})
 })
-app.listen(5000,function(){
-	console.log("server is listening portal code..");
+
+
+var port= 5000;
+app.listen(port,()=>{
+	console.log("server is listening portal code..", port);
 })
 
