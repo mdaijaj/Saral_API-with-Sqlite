@@ -5,7 +5,7 @@ We used many endpoints like get. post, put, update and delete. Firstly I created
 after its exercise and also his comment and I used POSTMAN its a API web toop it worked testing API.
 
 
-Requirments
+## Requirments
 If you're using Linux, install nodejs and npm(node-package-manager) by running follow commands in your terminal
 
 `Update : sudo apt-get update` <br><br>
@@ -20,6 +20,12 @@ If you testing API than you have to download Postman Application.<br>
 How to run?
 Open your terminal and type following command to start your localhost.
 
-nodemon saral_api.js<br>
+`nodemon saral_api.js` <br>
 
-Now open your browser and type the following URL:http://localhost:5000/all_courses and show the data.
+Now open your browser and type the following URL:http://localhost:5000/all_courses and show the data.<br>
+
+If you want to see database than following the command given there.<br>
+directory sqlite3 databases name.
+show database: `.databases` <br> 
+show tables : `.tabes` <br>
+then sqlite databases query
